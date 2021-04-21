@@ -10,9 +10,10 @@ export default {
         throw e;
       }
     },
-    async logout() {
+    async logout({ commit }) {
       try {
         await firebase.auth().signOut();
+        commit("clearInfo");
       } catch (e) {
         console.log(e);
         throw e;
