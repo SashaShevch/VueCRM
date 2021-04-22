@@ -49,7 +49,7 @@
         <input
           id="amount"
           type="number"
-          v-model="amount"
+          v-model.number="amount"
           :class="{ invalid: $v.amount.$dirty && !$v.amount.minValue }"
         />
         <label for="amount">Сумма</label>
