@@ -15,7 +15,7 @@ export default {
         await firebase.auth().signOut();
         commit("clearInfo");
       } catch (e) {
-        console.log(e);
+        commit("setError", e);
         throw e;
       }
     },
